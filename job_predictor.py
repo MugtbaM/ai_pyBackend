@@ -2,14 +2,18 @@ from transformers import AutoTokenizer, AutoModelForSequenceClassification
 import torch
 
 # Load your fine-tuned BERT model (placeholder paths)
-MODEL_PATH = "fine_tuned_model"
-TOKENIZER_PATH = "fine_tuned_model"
+#MODEL_PATH = "fine_tuned_model"
+#TOKENIZER_PATH = "fine_tuned_model"
 
 # Load the model
-model = AutoModelForSequenceClassification.from_pretrained(MODEL_PATH)
+#model = AutoModelForSequenceClassification.from_pretrained(MODEL_PATH)
 
 # Load the tokenizer
-tokenizer = AutoTokenizer.from_pretrained(TOKENIZER_PATH)
+#tokenizer = AutoTokenizer.from_pretrained(TOKENIZER_PATH)
+
+tokenizer = AutoTokenizer.from_pretrained("Tobi3172/bert_based_job_predictor")
+model = AutoModelForSequenceClassification.from_pretrained("Tobi3172/bert_based_job_predictor")
+
 
 def predict_job_title(text):
     try:
